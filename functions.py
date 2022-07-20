@@ -1,5 +1,6 @@
 def IMC(nombrePersona, peso, estatura):
 	# Determinar el IMC de una persona
+    # Y la composicion corporal
 	denominador = estatura ** 2
 	resultadoIMC = peso / denominador
 
