@@ -16,5 +16,5 @@ def results():
     aplicarIMC = functions.IMC(nombre, peso, estatura)
     resultadoIMC = aplicarIMC[0]
     composicionCorporal = aplicarIMC[1]
-    return
+    return render_template("results.html", nombre=nombre, peso=peso, estatura=estatura, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
 
