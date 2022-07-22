@@ -3,7 +3,11 @@
 
 {% block body %}
 	<h1>Agregar los datos manualmente</h1>
-	<form>
+	<form action="{{ url_for('results') }}">
+		<input type="text" name ="name" placeholder="Nombre">
+		<input type="number" name="weight" placeholder="Peso">
+		<input type="number" name="height" placeholder="Estatura">
 
+		<button>Enviar datos</button>
 	</form>
 {% endblock %}
