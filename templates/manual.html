@@ -3,10 +3,10 @@
 
 {% block body %}
 	<h1>Agregar los datos manualmente</h1>
-	<form action="{{ url_for('results') }}">
+	<form action="{{ url_for('results') }}" method="post">
 		<input type="text" name ="name" placeholder="Nombre">
-		<input type="number" name="weight" placeholder="Peso">
-		<input type="number" name="height" placeholder="Estatura">
+		<input type="number" step="0.01" name="weight" placeholder="Peso">
+		<input type="number" step="0.01" name="height" placeholder="Estatura">
 
 		<button>Enviar datos</button>
 	</form>

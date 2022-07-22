@@ -13,12 +13,12 @@ def manual():
 
 @app.route("/results", methods=["POST"])
 def results():
-    nombre = request.form.get("name")
-    peso = request.form.get("weight")
-    estatura = request.form.get("height")
+    name = request.form.get("name")
+    weight = float(request.form.get("weight"))
+    height = float(request.form.get("height"))
 
-    aplicarIMC = functions.IMC(nombre, peso, estatura)
+    aplicarIMC = functions.IMC(name, weight, height)
     resultadoIMC = aplicarIMC[0]
     composicionCorporal = aplicarIMC[1]
-    return render_template("results.html", nombre=nombre, peso=peso, estatura=estatura, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
+    return render_template("results.html", nombre=name, peso=weight, estatura=height, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
 
