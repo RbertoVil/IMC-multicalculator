@@ -11,7 +11,7 @@ def index():
 def manual():
     return render_template("manual.html")
 
-@app.route("/results", methods=["POST","GET"])
+@app.route("/results", methods=["POST"])
 def results():
     nombre = request.form.get("name")
     peso = request.form.get("weight")
