@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
 	return render_template("index.html")
 
+@app.route("/manual")
+def manual():
+    return render_template("manual.html")
+
 @app.route("/results", methods=["POST","GET"])
 def results():
     nombre = request.form.get("name")
