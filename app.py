@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import flask
-import functions
+#import functions
 
 # Para testear partes de nuestra app
 import scriptForTestings
@@ -26,7 +26,7 @@ def results():
     composicionCorporal = aplicarIMC[1]
 
     print("\n\nCreando Pdf\n\n")
-    functions.crearPDF(1)
+    #functions.crearPDF(1)
     print("\n\nPdf creado\n\n")
     scriptForTestings.listarArch()
 

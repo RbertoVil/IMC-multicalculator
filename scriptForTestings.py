@@ -18,6 +18,6 @@ def pruebaClases():
 def listarArch():
     os.listdir("pdf/")
 
-#functions.crearPDF(2)
+functions.crearPDF(2)
 
 #pruebaClases()
