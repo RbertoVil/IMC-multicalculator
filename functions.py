@@ -58,5 +58,9 @@ def crearPDF(nroCols):
 	# Guardamos la página actual
 	archPDF.showPage()
 
+    print("¿creando pdf?")
+
 	# Guardamos el archivo creado
 	archPDF.save()
+
+    print("¿save pdf?")
