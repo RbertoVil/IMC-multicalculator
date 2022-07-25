@@ -16,7 +16,7 @@ def pruebaClases():
     print(estudiante.id)
 
 def listarArch():
-    os.listdir("./pdf/")
+    os.listdir("/pdf/")
 
 #functions.crearPDF(2)
 
