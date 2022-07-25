@@ -3,7 +3,7 @@ import flask
 import functions
 
 # Para testear partes de nuestra app
-import scriptForTesting
+import scriptForTestings
 
 app = Flask(__name__)
 
