@@ -1,6 +1,17 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
+
+class persona:
+    def __init__(self):
+        self.id = ""
+        self.name = ""
+        self.peso = ""
+        self.estatura =""
+        self.resultadoIMC = ""
+        self.composicionCorporal =""
+
+
 def IMC(nombrePersona, peso, estatura):
 	# Determinar el IMC de una persona
 	# Y la composicion corporal
@@ -17,6 +28,7 @@ def IMC(nombrePersona, peso, estatura):
 		composicionCorporal = "Obesidad."
 
 	return(resultadoIMC, composicionCorporal)
+
 
 def crearPDF(nroCols):
 	# Crearemos el PDF
