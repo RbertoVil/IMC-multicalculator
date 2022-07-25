@@ -51,7 +51,6 @@ def crearPDF(nroCols):
 
 	archPDF.grid(xlist, ylist)
 
-
 	# Footer
 	archPDF.drawString(xInvertido/3, 50, "Developed by Roberto Villasana & Luis Rivas")
 
