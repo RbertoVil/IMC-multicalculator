@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import flask
 import functions
 
 app = Flask(__name__)
@@ -29,6 +30,6 @@ def results():
 def download():
     # Descargar el PDF
 
-    flask.flask.send_file("pdf/resultado-IMC.pdf")
+    flask.send_file("pdf/resultado-IMC.pdf")
 
     return render_template("download.html")
