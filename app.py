@@ -29,6 +29,6 @@ def results():
 def download():
     # Descargar el PDF
 
-    send_file("pdf/resultado-IMC.pdf")
+    flask.send_file("pdf/resultado-IMC.pdf")
 
     return render_template("download.html")
