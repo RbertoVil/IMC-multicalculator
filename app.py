@@ -20,5 +20,15 @@ def results():
     aplicarIMC = functions.IMC(name, weight, height)
     resultadoIMC = aplicarIMC[0]
     composicionCorporal = aplicarIMC[1]
+
+    functions.crearPDF(1)
+
     return render_template("results.html", nombre=name, peso=weight, estatura=height, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
 
+@app.route("/download")
+def download():
+    # Descargar el PDF
+
+    send_file("pdf/resultado-IMC.pdf")
+
+    return render_template("download.html")
