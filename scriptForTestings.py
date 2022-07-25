@@ -1,5 +1,6 @@
 import functions
 import pprint
+import os
 
 def pruebaClases():
     estudiante = functions.persona()
@@ -13,6 +14,9 @@ def pruebaClases():
     pprint.pprint(dir(estudiante))
 
     print(estudiante.id)
+
+def listarArch():
+    os.listdir("./pdf/")
 
 #functions.crearPDF(2)
 

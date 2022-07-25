@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 import flask
 import functions
 
+# Para testear partes de nuestra app
+import scriptForTesting
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -22,13 +25,18 @@ def results():
     resultadoIMC = aplicarIMC[0]
     composicionCorporal = aplicarIMC[1]
 
+    print("\n\nCreando Pdf\n\n")
     functions.crearPDF(1)
+    print("\n\nPdf creado\n\n")
+    scriptForTesting.listarArch()
 
     return render_template("results.html", nombre=name, peso=weight, estatura=height, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
 
 @app.route("/download")
 def download():
     # Descargar el PDF
+
+    scriptForTesting.listarArch()
 
     flask.send_file("pdf/resultado-IMC.pdf")
 
