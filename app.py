@@ -28,7 +28,7 @@ def results():
     print("\n\nCreando Pdf\n\n")
     functions.crearPDF(1)
     print("\n\nPdf creado\n\n")
-    scriptForTesting.listarArch()
+    scriptForTestings.listarArch()
 
     return render_template("results.html", nombre=name, peso=weight, estatura=height, resultadoIMC=resultadoIMC, composicionCorporal=composicionCorporal)
 
@@ -36,7 +36,7 @@ def results():
 def download():
     # Descargar el PDF
 
-    scriptForTesting.listarArch()
+    scriptForTestings.listarArch()
 
     flask.send_file("pdf/resultado-IMC.pdf")
 
