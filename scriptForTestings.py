@@ -1,4 +1,5 @@
 import functions
+import pprint
 
 def pruebaClases():
     estudiante = functions.persona()
@@ -9,4 +10,10 @@ def pruebaClases():
     estudiante.estatura = 1.75
     print(estudiante)
 
+    pprint.pprint(dir(estudiante))
+
+    print(estudiante.id)
+
 #functions.crearPDF(2)
+
+#pruebaClases()
